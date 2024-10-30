@@ -10,7 +10,6 @@ import lombok.Data;
 @DiscriminatorValue("Costume")
 public class Costume extends Clothing {
     private boolean hat;
-    private String size;
     private int numberPieces;
 
 }

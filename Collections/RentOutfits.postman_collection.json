@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "3ee7b555-5287-471f-a2d9-9f0c393f3f3b",
+		"name": "RentOutfits",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5920435"
+	},
+	"item": [
+		{
+			"name": "RegistroCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Jesus\",\r\n  \"address\": \"calle 13\",\r\n  \"phone\": \"1234567\",\r\n  \"email\": \"jose@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarEmpleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Jesus empleado\",\r\n  \"address\": \"la calle\",\r\n  \"phone\": \"4654645\",\r\n  \"role\": \"SISTEMAS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistroPrendaHombre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"color\": \"blue\",\r\n  \"brand\": \"Armani\",\r\n  \"size\": \"MEDIUM\",\r\n  \"price\": 1200,\r\n  \"type\": \"SMOCKING\",\r\n  \"accessories\": \"Zapatos\",\r\n  \"available\": true\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/suit/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"suit",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarVestidosDamas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"color\": \"blue\",\r\n  \"brand\": \"CHANNEL\",\r\n  \"size\": \"8\",\r\n  \"price\": 50000,\r\n  \"accessories\": false,\r\n  \"numberPieces\": 10\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/women/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"women",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarServicioAlquiler",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dateRequest\": \"\",\r\n  \"dateRent\": \"2024/11/05\",\r\n  \"clientId\": 5,\r\n  \"employeeId\": 4,\r\n  \"rentBusinessId\": 0,\r\n  \"clothingList\": [3,4],\r\n  \"quantity\": 2\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/rent/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rent",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaServicioAlquiler",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/rent/getServiceById?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rent",
+						"getServiceById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaServiciosCliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/rent/getServiceByClient?clientId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rent",
+						"getServiceByClient"
+					],
+					"query": [
+						{
+							"key": "clientId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaServiciosFecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/rent/getServiceByDate?date=2024/10/27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rent",
+						"getServiceByDate"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2024/10/27"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaPrendasHombreTalla",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/suit/getSuitManBySize?size=MEDIUM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"suit",
+						"getSuitManBySize"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "MEDIUM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaPrendasMujerTalla",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/women/getWomendressBySize?size=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"women",
+						"getWomendressBySize"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistroPrendaLavandería",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idClothingLaundry\": 1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/rent/doLaundry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rent",
+						"doLaundry"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListadoPrendasLavandería",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/rent/listLaundry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rent",
+						"listLaundry"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

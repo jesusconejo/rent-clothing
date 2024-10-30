@@ -7,7 +7,6 @@ import lombok.Data;
 @Entity
 @Data
 public class WomenDress extends Clothing{
-    private boolean accessories;
-    private String size;
+    private Boolean accessories;
     private int numberPieces;
 }

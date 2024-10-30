@@ -16,8 +16,8 @@ public class RentBusiness {
     @OneToMany(mappedBy = "rentBusiness")
     private List<Clothing> listClothing;
 
-   /* @OneToMany
-    private List<Prenda> listaLavanderia;*/
+   @OneToMany
+    private List<Clothing> listLaundry;
 
     @OneToMany(mappedBy = "rentBusiness")
     private List<RentService> rentServices;

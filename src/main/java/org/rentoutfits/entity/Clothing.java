@@ -19,6 +19,7 @@ public class Clothing {
     private String brand;
     private String size;
     private Double price;
+    private Boolean available;
 
     @ManyToOne
     @JoinColumn(name = "business_id")
